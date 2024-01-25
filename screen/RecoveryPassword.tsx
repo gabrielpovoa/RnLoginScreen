@@ -5,11 +5,15 @@ import {
   ViewRestPassword,
 } from "../global/Global";
 
-export const RecoveryPassword = () => {
+type Props = {
+  recoveryPassWord: () => void;
+};
+
+export const RecoveryPassword = ({ recoveryPassWord }: Props) => {
   return (
     <>
       <ViewRestPassword>
-        <ForgetPassword>
+        <ForgetPassword onPress={recoveryPassWord}>
           <TextForgetPassword>Reset Password</TextForgetPassword>
         </ForgetPassword>
       </ViewRestPassword>
